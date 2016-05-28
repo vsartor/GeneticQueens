@@ -98,3 +98,11 @@ solve_nq <- function(pop_size, chrom_size, mut_rate, stopcond = 0.999) {
 
     pop[which(fit > stopcond)[1], ]
 }
+
+
+# Some speedup for free
+gen_pop <- compiler::cmpfun(gen_pop)
+.fitness <- compiler::cmpfun(.fitness)
+fitness <- compiler::cmpfun(fitness)
+crossover <- compiler::cmpfun(crossover)
+solve_nq <- compiler::cmpfun(solve_nq)
