@@ -5,7 +5,7 @@ library(magrittr)
 
 
 gen_pop <- function(pop_size, chrom_size) {
-    # Returns a matrix with shape (pop_size, chrom_size) filled with
+    # Returns a matrix with dim (pop_size, chrom_size) filled with
     # values sampled from a discrete uniform distribution with
     # support in {1, 2, ..., chrom_size}.
 
@@ -16,7 +16,7 @@ gen_pop <- function(pop_size, chrom_size) {
 
 .fitness <- function(chrom) {
     # Returns a measure of fitness for a particular chromossome in
-    # the inverval [0, 1] where 1 means it's a perfect solution.
+    # the interval [0, 1] where 1 means it's a perfect solution.
 
     chrom_size <- length(chrom)
     attacks <- 0
@@ -42,7 +42,7 @@ gen_pop <- function(pop_size, chrom_size) {
 }
 
 fitness <- function(pop) {
-    # Applies .fitness to every chromossome in the population pop.
+    # Applies .fitness to every chromossome in the population.
 
     apply(pop, 1, .fitness)
 }
