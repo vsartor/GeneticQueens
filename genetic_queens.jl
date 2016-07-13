@@ -1,3 +1,6 @@
+# N-Queens Solution with Genetic Algorithms in Julia
+# Victhor S. Sartório
+
 import Distributions
 import StatsBase
 
