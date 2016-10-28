@@ -110,8 +110,8 @@ func getMaxInfo(v []float64) (int, float64) {
 }
 
 func main() {
-	popSize := 10
-	numQueens := 8
+	popSize := 1024
+	numQueens := 10
 	mutationRate := 0.05
 
 	fmt.Println("Initializing...")
@@ -131,6 +131,6 @@ func main() {
 	}
 
 	fmt.Println("Evolution ended.")
-	fmt.Printf("Generation: %d\nFitness value:%f\n", gen, mVal)
+	fmt.Printf("Generation: %d\nFitness value: %f\n", gen, mVal)
 	printMatrix(pop.RowView(mIdx).T(), 3, 0)
 }
