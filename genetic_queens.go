@@ -132,5 +132,5 @@ func main() {
 
 	fmt.Println("Evolution ended.")
 	fmt.Printf("Generation: %d\nFitness value:%f\n", gen, mVal)
-	printMatrix(pop.RowView(mIdx), 3, 0)
+	printMatrix(pop.RowView(mIdx).T(), 3, 0)
 }
