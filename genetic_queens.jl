@@ -30,8 +30,7 @@ function fitness(population::Array{Int,2})
 	# For each member calculate fitness
 	for k in 1:nchroms
 		# afit measures the number of attacks, which is the opposite of fitness
-		afit::UInt
-		afit = 0
+		local afit::UInt = 0
 		for i in 1:nqueens
 			pivot = population[k,i]
 			for j in i+1:nqueens
